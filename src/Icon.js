@@ -1,16 +1,19 @@
 import React from "react";
 
-export default function Icon({ fill, nbr }) {
+const Icon = ({ fill, nbr }) => {
   let brightness;
   if (nbr < 0) {
     brightness = -nbr + 10;
   } else {
     brightness = nbr + 10;
   }
-
   return (
-    <svg xmlns="http://www.w3.org/2000/svg" width="77px" height="70px" margin="20px">
-      
+    <svg
+      xmlns="http://www.w3.org/2000/svg"
+      width="77px"
+      height="70px"
+      margin="20px"
+    >
       <g>
         <rect
           x="0"
@@ -26,4 +29,5 @@ export default function Icon({ fill, nbr }) {
       </g>
     </svg>
   );
-}
+};
+export default Icon;

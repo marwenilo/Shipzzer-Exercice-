@@ -2,7 +2,8 @@ import React, { useState, useEffect } from "react";
 import "./App.css";
 import Input from "./Input";
 import Square from "./Square";
-function App() {
+
+const App = () => {
   const [GetNbr, setGetNbr] = useState();
 
   const [ArrayNbr, setArrayNbr] = useState([]);
@@ -10,7 +11,6 @@ function App() {
   useEffect(() => {
     getRandomInt();
   }, [GetNbr]);
-  console.log(ArrayNbr);
 
   const getRandomInt = () => {
     let arr = [...ArrayNbr];
@@ -28,6 +28,6 @@ function App() {
       <Square SquareNumbers={ArrayNbr} />
     </div>
   );
-}
+};
 
 export default App;

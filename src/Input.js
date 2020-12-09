@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 
-export default function Input({ setGetNbr }) {
+const Input = ({ setGetNbr }) => {
   const [InputValue, setInputValue] = useState();
 
   const handelInput = () => {
@@ -12,7 +12,7 @@ export default function Input({ setGetNbr }) {
       alert("Please input a positive Number");
     }
   };
-  
+
   return (
     <div className="input-container">
       <input
@@ -24,4 +24,6 @@ export default function Input({ setGetNbr }) {
       <button onClick={handelInput}>Load</button>
     </div>
   );
-}
+};
+
+export default Input;

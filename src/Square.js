@@ -1,8 +1,7 @@
 import React from "react";
-import styled from "styled-components";
 import Icon from "./Icon";
 
-export default function Square({ SquareNumbers }) {
+const Square = ({ SquareNumbers }) => {
   console.log(SquareNumbers, "SquareNumbers");
   return (
     <div className="square-container">
@@ -17,4 +16,5 @@ export default function Square({ SquareNumbers }) {
         })}
     </div>
   );
-}
+};
+export default Square;
