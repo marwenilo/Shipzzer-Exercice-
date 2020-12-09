@@ -12,6 +12,7 @@ export default function Input({ setGetNbr }) {
       alert("Please input a positive Number");
     }
   };
+  
   return (
     <div className="input-container">
       <input
