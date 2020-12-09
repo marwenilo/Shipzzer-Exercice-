@@ -1,23 +1,31 @@
-import logo from './logo.svg';
-import './App.css';
-
+import React, { useState, useEffect } from "react";
+import "./App.css";
+import Input from "./Input";
+import Square from "./Square";
 function App() {
+  const [GetNbr, setGetNbr] = useState();
+
+  const [ArrayNbr, setArrayNbr] = useState([]);
+
+  useEffect(() => {
+    getRandomInt();
+  }, [GetNbr]);
+  console.log(ArrayNbr);
+
+  const getRandomInt = () => {
+    let arr = [...ArrayNbr];
+    for (let i = 1; i <= GetNbr; i++) {
+      let y = Math.floor(Math.random() * 201) - 100;
+      arr = [...arr, y];
+    }
+    setArrayNbr([...arr]);
+    setGetNbr(0);
+  };
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Input setGetNbr={setGetNbr} />
+      <Square SquareNumbers={ArrayNbr} />
     </div>
   );
 }
