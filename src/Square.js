@@ -2,7 +2,6 @@ import React from "react";
 import Icon from "./Icon";
 
 const Square = ({ SquareNumbers }) => {
-  console.log(SquareNumbers, "SquareNumbers");
   return (
     <div className="square-container">
       {SquareNumbers &&

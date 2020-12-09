@@ -15,8 +15,8 @@ const App = () => {
   const getRandomInt = () => {
     let arr = [...ArrayNbr];
     for (let i = 1; i <= GetNbr; i++) {
-      let y = Math.floor(Math.random() * 201) - 100;
-      arr = [...arr, y];
+      let randomNbr = Math.floor(Math.random() * 201) - 100;
+      arr = [...arr, randomNbr];
     }
     setArrayNbr([...arr]);
     setGetNbr(0);

@@ -9,7 +9,7 @@ const Input = ({ setGetNbr }) => {
       setInputValue(0);
     } else {
       setInputValue(0);
-      alert("Please input a positive Number");
+      alert("Please put a positive Number");
     }
   };
 
